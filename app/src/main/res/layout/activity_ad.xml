@@ -23,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:background="@android:color/transparent"
-        android:text="Dismiss"
+        android:text="@string/desbloquear"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

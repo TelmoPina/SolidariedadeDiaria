@@ -110,28 +110,28 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.institute_one:
-                mInstituteString = "Institute 1";
+                mInstituteString = "Institution 1";
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }
                 break;
 
             case R.id.institute_two:
-                mInstituteString = "Institute 2";
+                mInstituteString = "Institution 2";
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }
                 break;
 
             case R.id.institute_three:
-                mInstituteString = "Institute 3";
+                mInstituteString = "Institution 3";
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }
                 break;
 
             case R.id.institute_four:
-                mInstituteString = "Institute 4";
+                mInstituteString = "Institution 4";
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }

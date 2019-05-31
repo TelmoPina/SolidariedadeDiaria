@@ -8,9 +8,6 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
-/**
- * Created by Pranay Sancheti.
- */
 public interface ApiInterface {
     /**
      * api call to register user

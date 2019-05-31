@@ -1,9 +1,5 @@
 package com.telmopina.solidariedadediaria.utils;
 
-/**
- * Created by Pranay Sancheti.
- */
-
 public class Constants {
 
     //TODO change app url

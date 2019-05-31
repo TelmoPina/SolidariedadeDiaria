@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 1" />
+                android:text="@string/institution1" />
 
         </LinearLayout>
 
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 2" />
+                android:text="@string/institution2" />
 
         </LinearLayout>
 
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 3" />
+                android:text="@string/institution3" />
 
         </LinearLayout>
 
@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 4" />
+                android:text="@string/institution4" />
 
         </LinearLayout>
 

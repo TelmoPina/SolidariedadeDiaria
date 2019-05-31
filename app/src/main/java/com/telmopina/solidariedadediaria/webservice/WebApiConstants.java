@@ -1,9 +1,5 @@
 package com.telmopina.solidariedadediaria.webservice;
 
-/**
- * Created by Pranay Sancheti.
- */
-
 public enum WebApiConstants {
     LOGIN,
     SIGN_UP,

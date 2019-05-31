@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="@string/name"
             android:textColor="@android:color/black" />
 
         <EditText
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Password"
+            android:text="@string/password"
             android:textColor="@android:color/black" />
 
         <EditText
@@ -61,5 +61,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_layout"
         android:layout_centerHorizontal="true"
-        android:text="Change" />
+        android:text="@string/mudar_palavrapasse" />
 </RelativeLayout>

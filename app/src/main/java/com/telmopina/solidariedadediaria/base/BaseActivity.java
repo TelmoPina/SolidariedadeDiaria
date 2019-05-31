@@ -12,10 +12,6 @@ import android.widget.Toast;
 
 import com.telmopina.solidariedadediaria.R;
 
-/**
- * Created by Pranay Sancheti
- */
-
 public class BaseActivity extends AppCompatActivity {
 
     private View progressBar;

@@ -7,23 +7,31 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
-    <string name="institution">Institution</string>
-    <string name="movements">Movements</string>
-    <string name="user_info">User Info</string>
-    <string name="others">Others</string>
-    <string name="support">Support</string>
+    <string name="menu_home">Carteira</string>
+    <string name="institution">Instituições</string>
+    <string name="movements">Movimentos</string>
+    <string name="user_info">Perfil</string>
+    <string name="others">Outros</string>
+    <string name="support">Suporte</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
-    <string name="sign_up_string">Don\'t have account? <b>Sign Up</b></string>
-    <string name="have_account">Already have an account? <b>Login</b></string>
-    <string name="name">Name</string>
-    <string name="register">Register</string>
-    <string name="logout">Logout</string>
+    <string name="user_email_var">%s</string>
+    <string name="password">Palavra-passe</string>
+    <string name="login">Entrar</string>
+    <string name="sign_up_string">Ainda não possui? <b>Registe-se</b></string>
+    <string name="have_account">Já possui uma conta? <b>Login</b></string>
+    <string name="name">Nome</string>
+    <string name="register">Registar</string>
+    <string name="logout">Sair da Conta</string>
+    <string name="desbloquear">Desbloquear</string>
+    <string name="enviar_dinheiro">Enviar dinheiro</string>
+    <string name="mudar_palavrapasse">Mudar palavra-passe</string>
+    <string name="institution1">Instituição 1</string>
+    <string name="institution2">Instituição 2</string>
+    <string name="institution3">Instituição 3</string>
+    <string name="institution4">Instituição 4</string>
+    <string name="description">Descrição</string>
+
+
+
+
 </resources>
