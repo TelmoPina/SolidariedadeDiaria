@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.byteshaft.solidariedadediria.R;
+import com.telmopina.solidariedadediaria.R;
 
 public class Support extends Fragment {
 

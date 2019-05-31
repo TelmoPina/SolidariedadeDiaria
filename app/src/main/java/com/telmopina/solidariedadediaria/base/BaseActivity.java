@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.byteshaft.solidariedadediria.R;
+import com.telmopina.solidariedadediaria.R;
 
 /**
  * Created by Pranay Sancheti

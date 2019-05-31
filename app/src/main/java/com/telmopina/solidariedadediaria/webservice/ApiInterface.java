@@ -1,7 +1,7 @@
 package com.telmopina.solidariedadediaria.webservice;
 
-import com.byteshaft.solidariedadediria.dao.NewMovementRequest;
-import com.byteshaft.solidariedadediria.dao.UserRequest;
+import com.telmopina.solidariedadediaria.dao.NewMovementRequest;
+import com.telmopina.solidariedadediaria.dao.UserRequest;
 import com.google.gson.JsonObject;
 
 import retrofit2.Call;

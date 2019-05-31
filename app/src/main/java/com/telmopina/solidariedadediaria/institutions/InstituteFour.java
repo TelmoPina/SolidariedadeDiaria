@@ -3,7 +3,7 @@ package com.telmopina.solidariedadediaria.institutions;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.byteshaft.solidariedadediria.R;
+import com.telmopina.solidariedadediaria.R;
 
 public class InstituteFour extends AppCompatActivity {
 

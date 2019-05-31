@@ -11,11 +11,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 
-import com.byteshaft.solidariedadediria.AdActivity;
-import com.byteshaft.solidariedadediria.MainActivity;
-import com.byteshaft.solidariedadediria.R;
-import com.byteshaft.solidariedadediria.base.BaseActivity;
-import com.byteshaft.solidariedadediria.utils.AppGlobals;
+import com.telmopina.solidariedadediaria.AdActivity;
+import com.telmopina.solidariedadediaria.MainActivity;
+import com.telmopina.solidariedadediaria.R;
+import com.telmopina.solidariedadediaria.base.BaseActivity;
+import com.telmopina.solidariedadediaria.utils.AppGlobals;
 
 public class AccountManager extends BaseActivity {
 

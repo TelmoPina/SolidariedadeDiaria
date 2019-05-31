@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.byteshaft.solidariedadediria.DialogActivity;
-import com.byteshaft.solidariedadediria.R;
-import com.byteshaft.solidariedadediria.utils.AppGlobals;
+import com.telmopina.solidariedadediaria.DialogActivity;
+import com.telmopina.solidariedadediaria.R;
+import com.telmopina.solidariedadediaria.utils.AppGlobals;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;

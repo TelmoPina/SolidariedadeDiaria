@@ -2,7 +2,7 @@ package com.telmopina.solidariedadediaria.webservice;
 
 import android.widget.Toast;
 
-import com.byteshaft.solidariedadediria.base.BaseActivity;
+import com.telmopina.solidariedadediaria.base.BaseActivity;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 

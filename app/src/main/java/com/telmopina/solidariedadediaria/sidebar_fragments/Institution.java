@@ -11,11 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.byteshaft.solidariedadediria.R;
-import com.byteshaft.solidariedadediria.institutions.InstituteFour;
-import com.byteshaft.solidariedadediria.institutions.InstituteOne;
-import com.byteshaft.solidariedadediria.institutions.InstituteThree;
-import com.byteshaft.solidariedadediria.institutions.InstituteTwo;
+import com.telmopina.solidariedadediaria.R;
+import com.telmopina.solidariedadediaria.institutions.InstituteFour;
+import com.telmopina.solidariedadediaria.institutions.InstituteOne;
+import com.telmopina.solidariedadediaria.institutions.InstituteThree;
+import com.telmopina.solidariedadediaria.institutions.InstituteTwo;
 
 public class Institution extends Fragment implements View.OnClickListener {
 
