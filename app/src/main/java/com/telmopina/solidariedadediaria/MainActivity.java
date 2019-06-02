@@ -42,6 +42,7 @@ import retrofit2.Call;
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener, ApiCallbacks {
 
+    // Quando a aplicação inicializa pela primeira vez
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,11 +64,12 @@ public class MainActivity extends BaseActivity
         loadFragment(new Home());
     }
 
+    // Quando a aplicação está pronta/recomeça
     @Override
     protected void onResume() {
         super.onResume();
 
-        //api call to login user to get updated data everytime
+        //API chama o login user para obter os dados atualizados
         mActivity.showProgress();
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("email", AppGlobals.getStringFromSharedPreferences(AppGlobals.KEY_EMAIL));
@@ -75,13 +77,14 @@ public class MainActivity extends BaseActivity
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<JsonObject> call = apiService.getUser(jsonObject);
         WebServiceCaller.CallWebApi(call, WebApiConstants.LOGIN, mActivity, this);
-        System.out.println("user Id is: " + AppGlobals.getStringFromSharedPreferences(AppGlobals.KEY_ID));
+        System.out.println("o ID é: " + AppGlobals.getStringFromSharedPreferences(AppGlobals.KEY_ID));
         registerBroadcastReceiver();
     }
-
+    //Um intent que espera que o utilizador desligue o ecrã para aparecer a AdActivity
     private void registerBroadcastReceiver() {
         final IntentFilter theFilter = new IntentFilter();
         theFilter.addAction(Intent.ACTION_SCREEN_ON);
+        theFilter.addAction(Intent.ACTION_USER_PRESENT);
         theFilter.addAction(Intent.ACTION_SCREEN_OFF);
 
         BroadcastReceiver screenOnOffReceiver = new BroadcastReceiver() {
@@ -91,7 +94,7 @@ public class MainActivity extends BaseActivity
 
                 KeyguardManager myKM = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
 
-                if (strAction.equals(Intent.ACTION_SCREEN_OFF) || strAction.equals(Intent.ACTION_SCREEN_ON)) {
+                if (strAction.equals(Intent.ACTION_SCREEN_OFF) || strAction.equals(Intent.ACTION_USER_PRESENT) || strAction.equals(Intent.ACTION_SCREEN_ON)) {
                     if (myKM.inKeyguardRestrictedInputMode()) {
                         System.out.println("Screen off " + "LOCKED");
                         if (AdActivity.getInstance() == null) {

@@ -79,7 +79,7 @@ public class UserInfo extends BaseFragment implements ApiCallbacks {
     public void onSuccess(JsonObject jsonObject, Enum anEnum) {
         mActivity.hideProgress();
         if (anEnum == WebApiConstants.UPDATE_USER)
-            Toast.makeText(getContext(), "Updated", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Atualizado", Toast.LENGTH_LONG).show();
 
     }
 

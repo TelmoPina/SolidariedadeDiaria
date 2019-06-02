@@ -84,20 +84,20 @@ public class Register extends BaseFragment implements View.OnClickListener, ApiC
         mNameString = mName.getText().toString();
 
         if (mEmailString.trim().isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(mEmailString).matches()) {
-            mEmail.setError("please provide a valid email");
+            mEmail.setError("Insira um mail válido");
             valid = false;
         } else {
             mEmail.setError(null);
         }
         if (mPasswordString.isEmpty() || mPassword.length() < 4) {
-            mPassword.setError("Enter minimum 4 alphanumeric characters");
+            mPassword.setError("Insira um minimo de 4 caracteres");
             valid = false;
         } else {
             mPassword.setError(null);
         }
 
         if (mNameString.isEmpty()) {
-            mName.setError("Required");
+            mName.setError("Necessário preencher");
             valid = false;
         } else {
             mName.setError(null);
@@ -110,7 +110,7 @@ public class Register extends BaseFragment implements View.OnClickListener, ApiC
         mActivity.hideProgress();
         if (anEnum == WebApiConstants.SIGN_UP) {
             //api response for sign_up, and saving data into shared preferences
-            Toast.makeText(getContext(), "Registered", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Registado", Toast.LENGTH_LONG).show();
             AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_ID, String.valueOf(WebServiceCaller.getResponsePacket(jsonObject).get("id")));
             AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_NAME, mNameString);
             AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_EMAIL, mEmailString);

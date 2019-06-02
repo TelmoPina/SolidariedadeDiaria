@@ -85,13 +85,13 @@ public class Login extends BaseFragment implements View.OnClickListener, ApiCall
         mPasswordString = mPassword.getText().toString();
 
         if (mEmailString.trim().isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(mEmailString).matches()) {
-            mEmail.setError("please provide a valid email");
+            mEmail.setError("Insira um email válido");
             valid = false;
         } else {
             mEmail.setError(null);
         }
         if (mPasswordString.isEmpty() || mPassword.length() < 4) {
-            mPassword.setError("Enter minimum 4 characters");
+            mPassword.setError("Insira um minimo de 4 caracteres");
             valid = false;
         } else {
             mPassword.setError(null);

@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.telmopina.solidariedadediaria.MainActivity;
+
 public class AppGlobals extends Application {
 
     public static final String KEY_ID = "id";

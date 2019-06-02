@@ -61,5 +61,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_layout"
         android:layout_centerHorizontal="true"
-        android:text="@string/mudar_palavrapasse" />
+        android:text="@string/atualizarperfil" />
 </RelativeLayout>

@@ -23,7 +23,7 @@ public class WebServiceCaller {
     public static void CallWebApi(Call<JsonObject> call, final Enum anEnum, final BaseActivity mActivity, final ApiCallbacks apiCallbacks) {
 
         if (call == null) {
-            Toast.makeText(mActivity, "No internet connection", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mActivity, "Sem conexão de Internet", Toast.LENGTH_SHORT).show();
             mActivity.hideProgress();
             return;
         }
