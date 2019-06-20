@@ -62,7 +62,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                     if (!s.toString().isEmpty()) {
                         if (availableBalance > Float.parseFloat(s.toString())) {
                             amountEditText.setTextColor(Color.BLACK);
-                            System.out.println("pay");
+                            System.out.println("pagar");
                             instituteOne.setClickable(true);
                             instituteTwo.setClickable(true);
                             instituteThree.setClickable(true);
@@ -70,7 +70,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
 
                         } else {
                             amountEditText.setTextColor(Color.RED);
-                            amountEditText.setError("Not Enough Money");
+                            amountEditText.setError("Não tem dinheiro suficiente");
                             instituteOne.setClickable(false);
                             instituteTwo.setClickable(false);
                             instituteThree.setClickable(false);
@@ -78,7 +78,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                         }
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("something went wrong");
+                    System.out.println("Alguma coisa correu mal!");
                 }
             }
 
@@ -97,7 +97,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
 
 
         if (mAmountString.trim().isEmpty() || mAmountString.equals("0")) {
-            amountEditText.setError("Please enter some amount");
+            amountEditText.setError("Por favor escreva um valor");
             valid = false;
         } else {
             amountEditText.setError(null);
@@ -173,7 +173,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
             WebServiceCaller.CallWebApi(call, WebApiConstants.UPDATE_AMOUNT, mActivity, this);
         } else if (anEnum == WebApiConstants.UPDATE_AMOUNT) {
             mActivity.hideProgress();
-            Toast.makeText(getApplicationContext(), "Payment Done!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Pagamento Feito!", Toast.LENGTH_LONG).show();
             finish();
         }
     }

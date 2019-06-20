@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="Choose an Institution"
+        android:text="Escolha uma instituição:"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -26,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:background="@android:drawable/edit_text"
-        android:hint="Enter Amount" />
+        android:hint="Escreva uma quantia" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 1" />
+                android:text="@string/institution1" />
 
         </LinearLayout>
 
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 2" />
+                android:text="@string/institution2" />
 
         </LinearLayout>
 
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 3" />
+                android:text="@string/institution3" />
 
         </LinearLayout>
 
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Institute 4" />
+                android:text="@string/institution4" />
 
         </LinearLayout>
 

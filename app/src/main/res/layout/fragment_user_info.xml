@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/edit_text"
-            android:hint="i:e John Snow" />
+            android:hint="Nome" />
 
 
         <TextView
