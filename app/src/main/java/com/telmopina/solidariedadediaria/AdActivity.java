@@ -1,12 +1,14 @@
 package com.telmopina.solidariedadediaria;
 
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+
 
 import com.telmopina.solidariedadediaria.base.BaseActivity;
 import com.telmopina.solidariedadediaria.utils.AppGlobals;
@@ -44,11 +46,13 @@ public class AdActivity extends BaseActivity implements View.OnClickListener, Ap
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
         setContentView(R.layout.activity_ad);
         adImage = findViewById(R.id.ad_image);
+
+
         dismissButton = findViewById(R.id.button_dismiss);
         adImage.setOnClickListener(this);
         dismissButton.setOnClickListener(this);
 
-        /// adding and updating balance
+        /// adicionar e atualizar montante
         newBalance = availableBalance + rewardedMoney;
 
 
