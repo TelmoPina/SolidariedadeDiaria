@@ -4,22 +4,29 @@
     android:layout_height="match_parent">
 
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
         android:layout_margin="16dp"
         android:gravity="center"
         android:orientation="vertical"
+
         android:padding="10dp">
 
+        <ImageView
+
+            android:id="@+id/inst_image"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_credit_card_black_24dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:text="@string/menu_home"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
@@ -31,7 +38,7 @@
             android:drawablePadding="10dp"
             android:text="10"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 
@@ -40,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
             android:text="@string/enviar_dinheiro" />
     </LinearLayout>
 
