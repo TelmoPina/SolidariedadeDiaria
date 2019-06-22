@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.telmopina.solidariedadediaria.R;
 import com.telmopina.solidariedadediaria.base.BaseActivity;
 import com.telmopina.solidariedadediaria.dao.NewMovementRequest;
 import com.telmopina.solidariedadediaria.utils.AppGlobals;
@@ -110,28 +111,28 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.institute_one:
-                mInstituteString = "Institution 1";
+                mInstituteString = getString(R.string.institution1);
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }
                 break;
 
             case R.id.institute_two:
-                mInstituteString = "Institution 2";
+                mInstituteString = getString(R.string.institution2);
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }
                 break;
 
             case R.id.institute_three:
-                mInstituteString = "Institution 3";
+                mInstituteString = getString(R.string.institution3);
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }
                 break;
 
             case R.id.institute_four:
-                mInstituteString = "Institution 4";
+                mInstituteString = getString(R.string.institution4);
                 if (validate()) {
                     sendMoney(mInstituteString, Float.parseFloat(mAmountString));
                 }

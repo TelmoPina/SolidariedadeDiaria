@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 
 
 import com.telmopina.solidariedadediaria.base.BaseActivity;
+import com.telmopina.solidariedadediaria.utils.AdImages;
 import com.telmopina.solidariedadediaria.utils.AppGlobals;
 import com.telmopina.solidariedadediaria.webservice.ApiCallbacks;
 import com.telmopina.solidariedadediaria.webservice.ApiClient;
@@ -19,12 +21,15 @@ import com.telmopina.solidariedadediaria.webservice.WebApiConstants;
 import com.telmopina.solidariedadediaria.webservice.WebServiceCaller;
 import com.google.gson.JsonObject;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 import retrofit2.Call;
 
 public class AdActivity extends BaseActivity implements View.OnClickListener, ApiCallbacks {
 
     private Button dismissButton;
-    private ImageView adImage;
+    private ImageView adImageView;
 
     private static AdActivity sInstance;
     private float availableBalance = AppGlobals.getMoneyFromSharedPreferences(AppGlobals.KEY_AMOUNT);
@@ -45,11 +50,12 @@ public class AdActivity extends BaseActivity implements View.OnClickListener, Ap
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
         setContentView(R.layout.activity_ad);
-        adImage = findViewById(R.id.ad_image);
+        adImageView = findViewById(R.id.ad_image);
+
 
 
         dismissButton = findViewById(R.id.button_dismiss);
-        adImage.setOnClickListener(this);
+        adImageView.setOnClickListener(this);
         dismissButton.setOnClickListener(this);
 
         /// adicionar e atualizar montante
@@ -65,7 +71,25 @@ public class AdActivity extends BaseActivity implements View.OnClickListener, Ap
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<JsonObject> call = apiService.updateAmount(object);
         WebServiceCaller.CallWebApi(call, WebApiConstants.UPDATE_AMOUNT, mActivity, this);
+        showRandomAdImage();
+
     }
+    public void shuffleAdImages(){
+        Collections.shuffle(Arrays.asList(imageArray));
+    }
+    public void showRandomAdImage(){
+        shuffleAdImages();
+        adImageView.setImageResource(imageArray[0].getAdImage());
+
+    }
+
+    AdImages i01 = new AdImages(R.drawable.ad_image_mac);
+    AdImages i02 = new AdImages(R.drawable.ad_image_worten);
+    AdImages i03 = new AdImages(R.drawable.ad_image_irs);
+
+    AdImages[] imageArray = new AdImages[] {i01,i03,i02 };
+
+
 
     @Override
     public void onClick(View v) {
@@ -84,6 +108,8 @@ public class AdActivity extends BaseActivity implements View.OnClickListener, Ap
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
+
+
 
     @Override
     public void onSuccess(JsonObject jsonObject, Enum anEnum) {

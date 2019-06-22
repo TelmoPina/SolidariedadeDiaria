@@ -160,9 +160,9 @@ public class MainActivity extends BaseActivity
 
     private void logOutDialog() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Confirmation!");
-        alertDialogBuilder.setMessage("Do you want to logout?")
-                .setCancelable(false).setPositiveButton("Yes",
+        alertDialogBuilder.setTitle("Confirmação!");
+        alertDialogBuilder.setMessage("Deseja mesmo sair?")
+                .setCancelable(false).setPositiveButton("Sim",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         AppGlobals.clearSettings();
@@ -171,7 +171,7 @@ public class MainActivity extends BaseActivity
                         finish();
                     }
                 });
-        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
