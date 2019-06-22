@@ -6,7 +6,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Carteira</string>
     <string name="institution">Instituições</string>
     <string name="movements">Movimentos</string>
@@ -25,13 +24,21 @@
     <string name="desbloquear">Desbloquear</string>
     <string name="enviar_dinheiro">Enviar dinheiro</string>
     <string name="atualizarperfil">Atualizar perfil</string>
-    <string name="institution1">Instituição 1</string>
-    <string name="institution2">Instituição 2</string>
-    <string name="institution3">Instituição 3</string>
-    <string name="institution4">Instituição 4</string>
-    <string name="description">Descrição</string>
-
-
-
-
+    <string name="institution1">O Século</string>
+    <string name="institution2">Acreditar</string>
+    <string name="institution3">Banco Alimentar</string>
+    <string name="institution4">CADIn</string>
+    <string name="description1">  A Fundação “O Século” foi criada em 1998 com o objetivo de continuar a obra social da antiga Colónia Balnear Infantil “O Século”, criada em 1927, por João Pereira da Rosa, o então diretor do Jornal “O Século”.
+        \n \n  A Fundação “O Século” tem como missão promover e contribuir para a criação de condições e oportunidades, que possibilitem não só o desenvolvimento sócio cultural de crianças, como a assistência social a idosos e pessoas menos favorecidas ou em risco social.
+        \n \n  Atualmente, todos os dias, a Fundação “O Século” apoia cerca de 800 pessoas: são crianças, idosos e famílias carenciadas que beneficiam da ajuda, através da intervenção da Fundação em diferentes áreas sociais.</string>
+    <string name="description2">  A Associação de Pais e Amigos de Crianças com Cancro é uma rede de partilha e de afectos feita de crianças, jovens, pais e amigos.
+        \n \n  Criada em 1994 para enfrentar da melhor maneira as dinâmicas que o cancro infantil impõe, tentando proporcionar a todos a certeza de apoio num momento de incertezas.
+        \n \n  Acompanham em todos os momentos da doença. Nas Casas da Acreditar, nos hospitais ou no domicílio, o seu apoio desdobra-se nos planos emocional, logístico, social ou outro que as famílias necessitem. Com a transparência, o profissionalismo, o coração e sobretudo a experiência de quem já passou pelo mesmo.</string>
+    <string name="description3">  Os Bancos Alimentares, criados em 1991, são Instituições Particulares de Solidariedade Social que lutam contra o desperdício de produtos alimentares, encaminhando-os para distribuição gratuita às pessoas carenciadas.
+        \n \n  O seu objetivo é evitar o desperdício de alimentos fazendo-os chegar às pessoas que têm fome. O Banco Alimentar recebe toda a qualidade de géneros alimentares, ofertas de empresas e particulares, em muitos casos excedentes de produção da indústria agroalimentar, excedentes agrícolas, da grande distribuição e ainda, produtos de intervenção da União Europeia.
+        \n \n  Os Bancos Alimentares em actividade recolhem e distribuem várias dezenas de milhares de toneladas de produtos e apoiam ao longo de todo o ano, a ação de instituições em Portugal. Por sua vez, estas distribuem refeições confecionadas e cabazes de alimentos a pessoas comprovadamente carenciadas, abrangendo já a distribuição total mais de 390.000 pessoas.
+        </string>
+    <string name="description4">  Criado em 2003, o CADIn é uma IPSS - Instituição Particular de Solidariedade Social pioneira na sua intervenção. Foi o primeiro centro em Portugal dedicado ao tratamento e estudo das perturbações do neurodesenvolvimento.
+\n \n  As famílias encontram no CADIn uma equipa de profissionais especializados no diagnóstico e tratamento das perturbações do neurodesenvolvimento, que acredita que cada pessoa tem direito aos melhores cuidados para poder realizar todo o seu potencial, em quaisquer circunstâncias e estágios de vida.
+\n \n  O apoio sustentado dos seus utentes e famílias não passa apenas pela excelência clínica:o CADIn foi pensado como um projeto de responsabilidade social inovador, orientado para fazer bem o bem. </string>
 </resources>

@@ -29,7 +29,7 @@ public class AdActivity extends BaseActivity implements View.OnClickListener, Ap
     private static AdActivity sInstance;
     private float availableBalance = AppGlobals.getMoneyFromSharedPreferences(AppGlobals.KEY_AMOUNT);
     private String email = AppGlobals.getStringFromSharedPreferences(AppGlobals.KEY_EMAIL);
-    private float rewardedMoney = 0.10f;
+    private float rewardedMoney = 0.01f;
     private float newBalance;
 
     public static AdActivity getInstance() {

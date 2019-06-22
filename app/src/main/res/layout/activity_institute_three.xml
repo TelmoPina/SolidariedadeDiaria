@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".institutions.InstituteThree">
+    tools:context=".institutions.InstituteOne">
 
     <RelativeLayout
         android:id="@+id/header_layout"
@@ -15,28 +15,26 @@
         <ImageView
 
             android:id="@+id/inst_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/ic_launcher_foreground" />
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/banco_alimentar" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/header_layout"
+        android:layout_marginTop="10dp"
+        android:layout_height="500dp">
+
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_margin="6dp"
-            android:layout_toRightOf="@+id/inst_image"
-            android:text="@string/institution3"
-            android:textSize="22dp" />
-    </RelativeLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/header_layout"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/description"
-        android:textSize="18sp" />
-
+            android:text="@string/description3"
+            android:textSize="18sp" />
+    </ScrollView>
 </RelativeLayout>

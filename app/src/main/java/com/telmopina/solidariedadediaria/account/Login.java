@@ -91,7 +91,7 @@ public class Login extends BaseFragment implements View.OnClickListener, ApiCall
             mEmail.setError(null);
         }
         if (mPasswordString.isEmpty() || mPassword.length() < 4) {
-            mPassword.setError("Insira um minimo de 4 caracteres");
+            mPassword.setError("Insira um mínimo de 4 caracteres");
             valid = false;
         } else {
             mPassword.setError(null);
