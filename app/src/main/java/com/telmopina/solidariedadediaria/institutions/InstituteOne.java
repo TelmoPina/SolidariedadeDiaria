@@ -11,6 +11,6 @@ public class InstituteOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_institute_one);
-        setTitle(getString(R.string.institution));
+        setTitle(getString(R.string.institution1));
     }
 }

@@ -24,7 +24,7 @@ public class ApiClient {
                 .readTimeout(60, TimeUnit.SECONDS)
                 .connectTimeout(60, TimeUnit.SECONDS);  // <-- this is the important line!
 
-        //create new object of retrofit.
+        //cria novos objetos de Retrofit
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(Constants.API_BASE_URL)
