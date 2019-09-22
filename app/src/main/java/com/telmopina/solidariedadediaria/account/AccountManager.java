@@ -30,16 +30,18 @@ public class AccountManager extends BaseActivity {
         super.onCreate(savedInstanceState);
         if (AppGlobals.isLogin()) {
             startActivity(new Intent(this, MainActivity.class));
+            finish();
         }
         setContentView(R.layout.activity_account_manager);
         sInstance = this;
         loadLoginFragment(new Login());
+
+        registerBroadcastReceiver();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        registerBroadcastReceiver();
     }
 
     private void loadLoginFragment(Fragment fragment) {

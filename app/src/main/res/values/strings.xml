@@ -39,6 +39,7 @@
         \n \n  Os Bancos Alimentares em actividade recolhem e distribuem várias dezenas de milhares de toneladas de produtos e apoiam ao longo de todo o ano, a ação de instituições em Portugal. Por sua vez, estas distribuem refeições confecionadas e cabazes de alimentos a pessoas comprovadamente carenciadas, abrangendo já a distribuição total mais de 390.000 pessoas.
         </string>
     <string name="description4">  Criado em 2003, o CADIn é uma IPSS - Instituição Particular de Solidariedade Social pioneira na sua intervenção. Foi o primeiro centro em Portugal dedicado ao tratamento e estudo das perturbações do neurodesenvolvimento.
-\n \n  As famílias encontram no CADIn uma equipa de profissionais especializados no diagnóstico e tratamento das perturbações do neurodesenvolvimento, que acredita que cada pessoa tem direito aos melhores cuidados para poder realizar todo o seu potencial, em quaisquer circunstâncias e estágios de vida.
-\n \n  O apoio sustentado dos seus utentes e famílias não passa apenas pela excelência clínica: o CADIn foi pensado como um projeto de responsabilidade social inovador, orientado para fazer bem o bem. </string>
+\n \n  As famílias encontram no CADIn uma equipa de profissionais especializados no diagnóstico e tratamento das perturbações do neurodesenvolvimento, que acredita que cada pessoa tem direito aos melhores cuidados para poder realizar todo o seu potencial, em quaisquer circunstâncias e estágios de vida.</string>
+    <string name="random_sentences">Random Sentences</string>
+    <string name="password_validation">Password must contain atleast a alphabet and a number and should be 8 characters long</string>
 </resources>

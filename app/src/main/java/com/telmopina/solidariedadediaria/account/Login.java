@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import com.telmopina.solidariedadediaria.MainActivity;
 import com.telmopina.solidariedadediaria.R;
 import com.telmopina.solidariedadediaria.base.BaseFragment;
@@ -22,9 +25,7 @@ import com.telmopina.solidariedadediaria.webservice.ApiClient;
 import com.telmopina.solidariedadediaria.webservice.ApiInterface;
 import com.telmopina.solidariedadediaria.webservice.WebApiConstants;
 import com.telmopina.solidariedadediaria.webservice.WebServiceCaller;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
+
 
 import java.lang.reflect.Type;
 
@@ -79,24 +80,19 @@ public class Login extends BaseFragment implements View.OnClickListener, ApiCall
     }
 
     private boolean validate() {
-        boolean valid = true;
+        mEmail.setError(null);
+        mPassword.setError(null);
 
         mEmailString = mEmail.getText().toString();
         mPasswordString = mPassword.getText().toString();
 
         if (mEmailString.trim().isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(mEmailString).matches()) {
             mEmail.setError("Insira um email válido");
-            valid = false;
-        } else {
-            mEmail.setError(null);
-        }
-        if (mPasswordString.isEmpty() || mPassword.length() < 4) {
-            mPassword.setError("Insira um mínimo de 4 caracteres");
-            valid = false;
-        } else {
-            mPassword.setError(null);
-        }
-        return valid;
+            return false;
+        } else if (mPasswordString.isEmpty() || mPassword.length() < 8 || !mActivity.validatePassword(mPassword.getText().toString())) {
+            mPassword.setError(getString(R.string.password_validation));
+            return false;
+        } else return true;
     }
 
     @Override

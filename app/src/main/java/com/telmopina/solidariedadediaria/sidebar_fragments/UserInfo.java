@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.JsonObject;
 import com.telmopina.solidariedadediaria.R;
 import com.telmopina.solidariedadediaria.base.BaseFragment;
 import com.telmopina.solidariedadediaria.utils.AppGlobals;
@@ -19,7 +20,7 @@ import com.telmopina.solidariedadediaria.webservice.ApiClient;
 import com.telmopina.solidariedadediaria.webservice.ApiInterface;
 import com.telmopina.solidariedadediaria.webservice.WebApiConstants;
 import com.telmopina.solidariedadediaria.webservice.WebServiceCaller;
-import com.google.gson.JsonObject;
+
 
 import retrofit2.Call;
 
@@ -49,18 +50,43 @@ public class UserInfo extends BaseFragment implements ApiCallbacks {
         mChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                update(
-                        mNameEditText.getText().toString(),
-                        mPasswordEditText.getText().toString(),
-                        mEmailEditText.getText().toString());
+                if (validate()) {
+                    update(
+                            mNameEditText.getText().toString(),
+                            mPasswordEditText.getText().toString(),
+                            mEmailEditText.getText().toString());
 
-                AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_NAME, mNameEditText.getText().toString());
-                AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_PASSWORD, mPasswordEditText.getText().toString());
+                    AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_NAME, mNameEditText.getText().toString());
+                    AppGlobals.saveStringToSharedPreferences(AppGlobals.KEY_PASSWORD, mPasswordEditText.getText().toString());
+                }
             }
         });
         return mBaseView;
     }
 
+    private boolean validate() {
+        boolean valid = true;
+
+        if (mEmailEditText.getText().toString().trim().isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(mEmailEditText.getText().toString()).matches()) {
+            mEmailEditText.setError("Insira um mail válido");
+            valid = false;
+        } else {
+            mEmailEditText.setError(null);
+        }
+        if (mPasswordEditText.getText().toString().isEmpty() || mPasswordEditText.getText().length() < 8 || !mActivity.validatePassword(mPasswordEditText.getText().toString())) {
+            mPasswordEditText.setError(getString(R.string.password_validation));
+            valid = false;
+        } else {
+            mPasswordEditText.setError(null);
+        }
+        if (mNameEditText.getText().toString().isEmpty()) {
+            mNameEditText.setError("Necessário preencher");
+            valid = false;
+        } else {
+            mNameEditText.setError(null);
+        }
+        return valid;
+    }
 
     private void update(final String name, final String password, final String email) {
         //api call to update user info

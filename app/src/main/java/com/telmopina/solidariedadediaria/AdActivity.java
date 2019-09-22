@@ -96,10 +96,12 @@ public class AdActivity extends BaseActivity implements View.OnClickListener, Ap
         switch (v.getId()) {
             case R.id.button_dismiss:
                 finish();
+                sInstance = null;
                 break;
             case R.id.ad_image:
                 openLink();
                 finish();
+                sInstance = null;
         }
     }
 

@@ -15,6 +15,7 @@ public class AppGlobals extends Application {
     public static final String KEY_PASSWORD = "password";
     public static final String KEY_AMOUNT = "amount";
     public static final String KEY_NAME = "name";
+    public static final String KEY_SENTENCE_INDEX = "sentence_index";
 
     @Override
     public void onCreate() {
@@ -58,7 +59,15 @@ public class AppGlobals extends Application {
         return sharedPreferences.getFloat(key, 0.0f);
     }
 
+    public static void saveIntToSharedPreferences(String key, int value) {
+        SharedPreferences sharedPreferences = getPreferenceManager();
+        sharedPreferences.edit().putInt(key, value).apply();
+    }
 
+    public static int getIntFromSharedPreferences(String key) {
+        SharedPreferences sharedPreferences = getPreferenceManager();
+        return sharedPreferences.getInt(key, 0);
+    }
 
     public static void clearSettings() {
         SharedPreferences sharedPreferences = getPreferenceManager();

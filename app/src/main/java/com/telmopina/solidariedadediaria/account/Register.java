@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.JsonObject;
 import com.telmopina.solidariedadediaria.MainActivity;
 import com.telmopina.solidariedadediaria.R;
 import com.telmopina.solidariedadediaria.base.BaseFragment;
@@ -22,7 +23,7 @@ import com.telmopina.solidariedadediaria.webservice.ApiClient;
 import com.telmopina.solidariedadediaria.webservice.ApiInterface;
 import com.telmopina.solidariedadediaria.webservice.WebApiConstants;
 import com.telmopina.solidariedadediaria.webservice.WebServiceCaller;
-import com.google.gson.JsonObject;
+
 
 import retrofit2.Call;
 
@@ -89,8 +90,8 @@ public class Register extends BaseFragment implements View.OnClickListener, ApiC
         } else {
             mEmail.setError(null);
         }
-        if (mPasswordString.isEmpty() || mPassword.length() < 4) {
-            mPassword.setError("Insira um minimo de 4 caracteres");
+        if (mPasswordString.isEmpty() || mPassword.length() < 8 || !mActivity.validatePassword(mPassword.getText().toString())) {
+            mPassword.setError(getString(R.string.password_validation));
             valid = false;
         } else {
             mPassword.setError(null);

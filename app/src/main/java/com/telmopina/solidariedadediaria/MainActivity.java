@@ -17,12 +17,16 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import com.telmopina.solidariedadediaria.account.AccountManager;
 import com.telmopina.solidariedadediaria.base.BaseActivity;
 import com.telmopina.solidariedadediaria.dao.UserResponse;
 import com.telmopina.solidariedadediaria.sidebar_fragments.Home;
 import com.telmopina.solidariedadediaria.sidebar_fragments.Institution;
 import com.telmopina.solidariedadediaria.sidebar_fragments.Movements;
+import com.telmopina.solidariedadediaria.sidebar_fragments.RandomSentences;
 import com.telmopina.solidariedadediaria.sidebar_fragments.Support;
 import com.telmopina.solidariedadediaria.sidebar_fragments.UserInfo;
 import com.telmopina.solidariedadediaria.utils.AppGlobals;
@@ -31,9 +35,7 @@ import com.telmopina.solidariedadediaria.webservice.ApiClient;
 import com.telmopina.solidariedadediaria.webservice.ApiInterface;
 import com.telmopina.solidariedadediaria.webservice.WebApiConstants;
 import com.telmopina.solidariedadediaria.webservice.WebServiceCaller;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
+
 
 import java.lang.reflect.Type;
 
@@ -62,6 +64,7 @@ public class MainActivity extends BaseActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         loadFragment(new Home());
+        registerBroadcastReceiver();
     }
 
     // Quando a aplicação está pronta/recomeça
@@ -85,7 +88,8 @@ public class MainActivity extends BaseActivity
         final IntentFilter theFilter = new IntentFilter();
         theFilter.addAction(Intent.ACTION_SCREEN_ON);
         theFilter.addAction(Intent.ACTION_USER_PRESENT);
-        theFilter.addAction(Intent.ACTION_SCREEN_OFF);
+
+        final Boolean[] isScreenOn = {false};
 
         BroadcastReceiver screenOnOffReceiver = new BroadcastReceiver() {
             @Override
@@ -94,17 +98,14 @@ public class MainActivity extends BaseActivity
 
                 KeyguardManager myKM = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
 
-                if (strAction.equals(Intent.ACTION_SCREEN_OFF) || strAction.equals(Intent.ACTION_USER_PRESENT) || strAction.equals(Intent.ACTION_SCREEN_ON)) {
-                    if (myKM.inKeyguardRestrictedInputMode()) {
-                        System.out.println("Screen off " + "LOCKED");
-                        if (AdActivity.getInstance() == null) {
-                            startActivity(new Intent(MainActivity.this, AdActivity.class));
-                        }
-                    } else {
-                        if (AdActivity.getInstance() == null) {
-                            System.out.println("Screen off " + "UNLOCKED");
-                            startActivity(new Intent(MainActivity.this, AdActivity.class));
-                        }
+
+                if (!isScreenOn[0] && strAction.equals(Intent.ACTION_USER_PRESENT)) {
+                    isScreenOn[0] = true;
+                } else if (isScreenOn[0] && strAction.equals(Intent.ACTION_SCREEN_ON)) {
+                    isScreenOn[0] = false;
+                    if (AdActivity.getInstance() == null) {
+                        System.out.println("Screen off " + "UNLOCKED");
+                        startActivity(new Intent(MainActivity.this, AdActivity.class));
                     }
                 }
             }
@@ -127,6 +128,9 @@ public class MainActivity extends BaseActivity
 
         } else if (id == R.id.nav_movements) {
             loadFragment(new Movements());
+
+        } else if (id == R.id.nav_random_sentences) {
+            loadFragment(new RandomSentences());
 
         } else if (id == R.id.nav_user_info) {
             loadFragment(new UserInfo());

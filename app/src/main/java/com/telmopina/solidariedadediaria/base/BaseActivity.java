@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.telmopina.solidariedadediaria.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class BaseActivity extends AppCompatActivity {
 
     private View progressBar;
@@ -93,6 +96,16 @@ public class BaseActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             textViewAction.setText(title);
         }
+    }
+
+    public boolean validatePassword(final String password){
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[A-Za-z])(?=.*?[0-9]).{8,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
     }
 
 }
