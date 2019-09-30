@@ -3,14 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:layout_marginBottom="100dp"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boa_ação_introduction"
+        android:layout_marginBottom="60dp"
+        android:justificationMode="inter_word"
+        android:padding="10dp"
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/txtSentence"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text="@string/institution1"
-        android:textSize="16sp" />
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnChangeSentence"
@@ -18,7 +30,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:layout_marginTop="20dp"
-        android:text="Button"
+        android:text="@string/random_sentences_button"
         android:textSize="16sp" />
 
 </LinearLayout>

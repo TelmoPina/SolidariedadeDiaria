@@ -46,7 +46,7 @@ public class Home extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.## \u20ac");
         df.setRoundingMode(RoundingMode.CEILING);
         float money = AppGlobals.getMoneyFromSharedPreferences(AppGlobals.KEY_AMOUNT);
         mMoneyText.setText(df.format(money));

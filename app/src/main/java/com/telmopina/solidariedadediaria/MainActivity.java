@@ -16,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -44,6 +45,8 @@ import retrofit2.Call;
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener, ApiCallbacks {
 
+
+    private TextView nomeView;
     // Quando a aplicação inicializa pela primeira vez
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class MainActivity extends BaseActivity
         if (AccountManager.getInstance() != null) {
             AccountManager.getInstance().finish();
         }
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

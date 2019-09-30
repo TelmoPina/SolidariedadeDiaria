@@ -11,7 +11,7 @@
     <string name="movements">Movimentos</string>
     <string name="user_info">Perfil</string>
     <string name="others">Outros</string>
-    <string name="support">Suporte</string>
+    <string name="support">Acerca da aplicação</string>
     <string name="email">Email</string>
     <string name="user_email_var">%s</string>
     <string name="password">Palavra-passe</string>
@@ -40,6 +40,11 @@
         </string>
     <string name="description4">  Criado em 2003, o CADIn é uma IPSS - Instituição Particular de Solidariedade Social pioneira na sua intervenção. Foi o primeiro centro em Portugal dedicado ao tratamento e estudo das perturbações do neurodesenvolvimento.
 \n \n  As famílias encontram no CADIn uma equipa de profissionais especializados no diagnóstico e tratamento das perturbações do neurodesenvolvimento, que acredita que cada pessoa tem direito aos melhores cuidados para poder realizar todo o seu potencial, em quaisquer circunstâncias e estágios de vida.</string>
-    <string name="random_sentences">Random Sentences</string>
-    <string name="password_validation">Password must contain atleast a alphabet and a number and should be 8 characters long</string>
+    <string name="random_sentences">Boa-Ação diária</string>
+    <string name="random_sentences_button">Próxima Boa-Ação</string>
+    <string name="password_validation">A palavra-passe deve ser composta por pelo menos 8 caracteres, contendo obrigatoriamente letras do alfabeto e números </string>
+    <string name="boa_ação_introduction"> Esta area é dedicada à Boa-Ação diária! Aqui pode obter sugestões de boas-ações para serem cumpridas no seu dia-a-dia de forma a tornar-se uma pessoa mais solidária! Assim que a boa-ação proposta seja cumprida, clique no botão "Próxima Boa-Ação" para obter uma nova! São 50 boas-ações. Boa sorte! </string>
+    <string name="acerca_de">A aplicação <i>Solidariedade Diária</i> pretende proporcionar aos seus utilizadores informações e ferramentas necessárias para poder ajudar diversas instituições, tanto monetariamente como gratuitamente, sem fins lucrativos. \n \nOs utilizadores da aplicação podem obter informações sobre cada instituição de solidariedade presente na aplicação, de modo a elegerem a instituição de solidariedade mais adequada para fazerem o seu donativo. \n \nA aplicação proporciona também uma funcionalidade que permite aos utilizadores angariarem dinheiro através da visualização de anúncios. Esse dinheiro angariado é imediatamente disponibilizado aos utilizadores para contribuições monetárias exclusivamente às instituições presentes na aplicação.
+\n \nEsta aplicação foi desenvolvida com recurso à linguagem de programação Java, através do IDE Android Studio, estando conectada a um servidor da empresa webhostapp através de PHP com uma base de dados SQL.
+</string>
 </resources>

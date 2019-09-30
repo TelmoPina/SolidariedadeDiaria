@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sentenceArray">
-        <item>first</item>
-        <item>second</item>
-        <item>third</item>
-        <item>fourth</item>
-        <item>fifth</item>
+        <item>Seja especialmente simpático a cumprimentar alguém conhecido</item>
+        <item>Converse com algum amigo que já não fala à algum tempo</item>
+        <item>Sorria a alguém na rua</item>
+        <item>Ofereça o seu troco a um sem-abrigo</item>
+        <item>Ajude os seus pais/cônjuge nas tarefas domésticas</item>
+        <item>Faça aquela tarefa que ninguém quer fazer</item>
+        <item>Faça a reciclagem</item>
+        <item>Gaste o mínimo de água possivel</item>
+        <item>Telefone a alguém apenas para conversar</item>
+        <item>Dê um abraço a alguém que gosta</item>
+        <item>Doe alguma coisa que já não precisa à caridade</item>
+        <item>Pare para ajudar alguém que esteja com algum problema</item>
+        <item>Faça alguem sorrir</item>
+        <item>Doe dinheiro a alguma instituição de caridade</item>
+        <item>Converse com um colega na escola ou no trabalho com quem ainda não falou</item>
+        <item>Segure a porta para quem vem atrás de si</item>
+        <item>Não faça as pessoas esperar por si. Chegue a horas a um compromisso</item>
+        <item>Deixe um comentário simpático na Internet</item>
+        <item>Economize energia elétrica</item>
+        <item>Evite comprar plástico</item>
+        <item>Faça uma doação de sangue</item>
+        <item>Peça desculpa a alguém por algo que tenha feito</item>
+        <item>Cumprimente o vizinho</item>
+        <item>Apanhe lixo que esteja no chão e coloque no respectivo contentor</item>
+        <item>Plante uma árvore</item>
+        <item>Utilize transportes públicos</item>
+        <item>Dê boleia a alguém para a escola/trabalho</item>
+        <item>Elogie o bom trabalho de um colega</item>
+        <item>Ofereça comida a um sem-abrigo</item>
+        <item>Ofereça o seu lugar a algum idoso em um local público</item>
+        <item>Doe livros que já não necessite</item>
+        <item>Plante uma árvore</item>
+        <item>Inscreva-se em um curso de Suporte Básico de Vida</item>
+        <item>Arrume algo desarrumado</item>
+        <item>Prepare uma refeição a alguem</item>
+        <item>Prepare uma sobremesa para a familia</item>
+        <item>Ajude alguém que pareça perdido</item>
+        <item>Dê um presente a alguem</item>
+        <item>Telefone a alguém que faça anos</item>
+        <item>Perdoe alguém</item>
+        <item>Telefone para um familiar</item>
+        <item>Deixe uma boa gorjeta a um empregado</item>
+        <item>Ajude alguém que pareça perdido</item>
+        <item>Faça uma doação online a uma ONG</item>
+        <item>Mande um mensagem positiva a alguém</item>
+        <item>Encorage alguém a praticar uma boa-acção</item>
+        <item>Devolva algo que você tem que não é seu</item>
+        <item>Pague o café a alguém</item>
+        <item>Seja um bom ouvinte</item>
+        <item>Reduza o seu desperdicio alimentar</item>
+
+
     </string-array>
 </resources>
